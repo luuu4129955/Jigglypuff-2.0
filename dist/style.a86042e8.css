@@ -1,0 +1,233 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff2f5;
+  position: relative;
+  min-height: 100vh;
+}
+.face {
+  position: absolute;
+  left: 50%;
+  top: 220px;
+  margin-left: -160px;
+  border: 2px #723d43 solid;
+  width: 320px;
+  height: 280px;
+  background-color: #f5d7de;
+  border-radius: 50%;
+}
+.hair {
+  position: absolute;
+  left: 50%;
+  top: 192px;
+  border-radius: 50%/50%;
+  margin-left: -60px;
+  border-left: 3px solid #723d43;
+  border-bottom: 3px solid #723d43;
+  background-color: #f5d7de;
+  height: 140px;
+  width: 120px;
+  transform: rotate(45deg);
+}
+.hair::before {
+  position: absolute;
+  top: 68px;
+  left: 70px;
+  content: "";
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border-right: 2px solid #723d43;
+  transform: rotate(-30deg);
+}
+.hair::after {
+  position: absolute;
+  top: 2px;
+  left: 50px;
+  content: "";
+  width: 42px;
+  height: 84px;
+  border-radius: 50%;
+  border-right: 2px solid #723d43;
+  transform: rotate(4deg);
+}
+.ear {
+  position: absolute;
+  background-color: #f5d7de;
+  width: 160px;
+  height: 200px;
+  border: 2px solid #723d43;
+  border-radius: 65px 300px 0px / 221px 234px 132px 300px;
+  left: 50%;
+  margin-left: -40px;
+  z-index: -1;
+}
+.left-ear {
+  transform: translateX(-120px) rotate(-12deg);
+}
+.left-ear::before,
+.right-ear::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: #41352a;
+}
+.left-ear::before {
+  transform: translateX(22px) translateY(26px);
+}
+.right-ear::before {
+  transform: translateX(22px) translateY(26px);
+}
+.right-ear {
+  transform: rotateX(158deg) translateX(48px) rotate(168deg);
+}
+.foot {
+  border: 2px solid #723d43;
+  position: absolute;
+  width: 38px;
+  height: 88px;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -19px;
+  top: 455px;
+  z-index: -1;
+  background-color: #f5d7de;
+}
+.left-foot {
+  transform: translateX(-80px) rotate(70deg);
+}
+.right-foot {
+  transform: translateX(90px) rotate(-70deg);
+}
+.eye {
+  position: absolute;
+  border: 2px solid #723d43;
+  background-color: #f9eef6;
+  width: 98px;
+  height: 98px;
+  left: 50%;
+  margin-left: -49px;
+  border-radius: 50%;
+}
+/* 眨眼动画 */
+/* @keyframes wink {
+  0% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+  80% {
+    transform: rotateX(90deg);
+  }
+  100% {
+  }
+} */
+.left-eye {
+  transform: translateX(-76px) translateY(88px);
+}
+.right-eye {
+  transform: translateX(76px) translateY(88px);
+}
+.eye::before,
+.eye::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+.eye::before {
+  border: 2px solid #7a8798;
+  background-color: #78a3cd;
+  width: 72px;
+  height: 72px;
+  left: 50%;
+  top: 50%;
+  margin-top: -36px;
+  margin-left: -36px;
+}
+.eye::after {
+  position: absolute;
+  content: "";
+  border: 2px solid #527cab;
+  background-color: #517aad;
+  width: 48px;
+  height: 48px;
+  transform: translateY(12px) translateX(22px);
+}
+.yuan {
+  position: absolute;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateY(16px) translateX(36px);
+  z-index: 1;
+}
+.mouth {
+  position: absolute;
+  background-color: #f67b94;
+  width: 28px;
+  height: 40px;
+  left: 50%;
+  top: 120px;
+  margin-left: -14px;
+  transform: translateY(28px);
+  border-radius: 50%;
+}
+.mouth::before {
+  content: "";
+  position: absolute;
+  background-color: #a41020;
+  width: 28px;
+  height: 20px;
+  border-radius: 50% / 100% 100% 0 0;
+}
+.hand {
+  position: absolute;
+  border-top: 3px solid #723d43;
+  border-right: 3px solid #723d43;
+  background-color: #f5d7de;
+  width: 90px;
+  height: 40px;
+  border-radius: 0px 90px 160px 0px / 40px;
+  left: 50%;
+  top: calc(50% + 76px);
+}
+.left-hand {
+  transform: translateX(-110px) rotate(30deg);
+}
+.right-hand {
+  transform: translateX(96px) rotate(30deg);
+  transform-origin: top;
+  border-bottom: 1px solid #723d43;
+}
+.microphone {
+  position: absolute;
+  left: 60px;
+  top: -50px;
+  width: 32px;
+  height: 42px;
+  border: 2px solid #58502c;
+  border-radius: 35%;
+  background-color: #568c6d;
+}
+.microphone::before {
+  position: absolute;
+  top: 38px;
+  left: 6px;
+  content: "";
+  width: 16px;
+  height: 48px;
+  border: 3px solid;
+  border-color: #f7f7f7 #45372e;
+  border-radius: 20%;
+  background-color: #45372e;
+}
