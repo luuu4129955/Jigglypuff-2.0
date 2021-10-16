@@ -16,6 +16,7 @@ const player={
   },
   n:1,
   init:()=>{
+
     player.ui.demo.innerText=string.substr(0,player.n)
     player.ui.demo2.innerHTML=string.substr(0,player.n)
     player.bindEvents()
